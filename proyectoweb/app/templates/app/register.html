@@ -1,0 +1,49 @@
+{% extends 'app/base.html'%}
+
+{% block contenido%}
+    <!-- Registro -->
+    <section id="seccionRegistro" class="container-fluid smooth-scroll">
+        <div class="container px-0 p-md-5 py-5" id="formContainer">
+            <div class="card py-4 p-md-5">
+                <div class="card-body text-center">
+                    <h4 class=" display-4 card-title">Registrarse</h4>
+                    <p class="card-text">Complete el siguiente formulario de registro
+                    </p>
+                </div>
+                <div class="card-body px-m-5 py-md-3">
+                    <form autocomplete="off" id="formularioReg" action="../index.html" method="post">
+                        <p>
+                            <label class="form-check-label" for="rUsuario">Nombre de Usuario*</label>
+                            <input type="text" class="form-control" id="rUsuario"
+                                name="rUsuario" required>
+                        </p>
+                        <p>
+                            <label class="form-check-label" for="rPassword">Password*</label>
+                            <input type="password" class="form-control" id="rPassword" name="rPassword" required>
+                        </p>
+                        <p>
+                            <label class="form-check-label" for="rPassword2">Re ingrese su Password*</label>
+                            <input type="password" class="form-control" id="rPassword2" name="rPassword2" required>
+                        </p>
+                        <p>
+                            <label class="form-check-label" for="rNombres">Nombres*</label>
+                            <input type="text" class="form-control" id="rNombres" name="rNombres" required>
+                        </p>
+                        <p>
+                            <label class="form-check-label" for="rApellidos">Apellidos*</label>
+                            <input type="text" class="form-control" id="rApellidos" name="rApellidos" required>
+                        </p>
+                        <p>
+                            <label class="form-check-label" for="rCorreo">Nombre de Usuario*</label>
+                            <input type="email" class="form-control" placeholder="pepito@correo.com" id="rCorreo"
+                                name="rCorreo" required>
+                        </p>
+                        <button type="submit" class="btn btn-lg btn-block btn-danger" id="form-btn" value="Enviar"><i
+                                class="fas fa-paper-plane"></i> Registrar Usuario</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Registro -->
+{% endblock %}
