@@ -13,6 +13,18 @@
                 <div class="card-body px-m-5 py-md-3">
                     <form autocomplete="off" id="formularioReg" action="../index.html" method="post">
                         <p>
+                            <label class="form-check-label" for="rNombre">Nombre*</label>
+                            <input type="text" class="form-control" id="rNombre" name="rNombre" required>
+                        </p>
+                        <p>
+                            <label class="form-check-label" for="rApellidop">Apellido paterno*</label>
+                            <input type="text" class="form-control" id="rApellidop" name="rApellidos" required>
+                        </p>
+                        <p>
+                            <label class="form-check-label" for="rApellidom">Apellido materno(opcional)</label>
+                            <input type="text" class="form-control" id="rApellidom" name="rApellidom">
+                        </p>
+                        <p>
                             <label class="form-check-label" for="rUsuario">Nombre de Usuario*</label>
                             <input type="text" class="form-control" id="rUsuario"
                                 name="rUsuario" required>
@@ -26,15 +38,11 @@
                             <input type="password" class="form-control" id="rPassword2" name="rPassword2" required>
                         </p>
                         <p>
-                            <label class="form-check-label" for="rNombres">Nombres*</label>
-                            <input type="text" class="form-control" id="rNombres" name="rNombres" required>
+                            <label class="form-check-label" for="rTelefono">Teléfono(opcional)</label>
+                            <input type="text" class="form-control" id="rTelefono" name="rTelefono">
                         </p>
                         <p>
-                            <label class="form-check-label" for="rApellidos">Apellidos*</label>
-                            <input type="text" class="form-control" id="rApellidos" name="rApellidos" required>
-                        </p>
-                        <p>
-                            <label class="form-check-label" for="rCorreo">Nombre de Usuario*</label>
+                            <label class="form-check-label" for="rCorreo">Correo de Usuario*</label>
                             <input type="email" class="form-control" placeholder="pepito@correo.com" id="rCorreo"
                                 name="rCorreo" required>
                         </p>

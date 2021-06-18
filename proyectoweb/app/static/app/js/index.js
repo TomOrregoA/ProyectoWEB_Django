@@ -52,10 +52,10 @@ $(document).ready(function () {
                 required: true,
                 equalTo: "#rPassword"
             },
-            rNombres: {
+            rNombre: {
                 required: true
             },
-            rApellidos: {
+            rApellidop: {
                 required: true
             },
             rCorreo: {
@@ -76,10 +76,10 @@ $(document).ready(function () {
                 required: "Debe ingresar una contraseña.",
                 equalTo: "Ámbas contraseñas deben coincidir."
             },
-            rNombres: {
+            rNombre: {
                 required: "Debe ingresar su(s) nombre(s)."
             },
-            rApellidos: {
+            rApellidop: {
                 required: "Debe ingresar su(s) apellido(s)."
             },
             rCorreo: {
@@ -306,7 +306,7 @@ $(document).ready(() => {
     });
 })
 
-/*  */
+//carro de compras
 $(document).ready(($) =>{
     let bsDefaults = {
             offset: false,
