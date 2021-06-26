@@ -3,7 +3,7 @@ from django.db import models
 #Modelo para usuarios
 
 class Usuario(models.Model):
-    idUser = models.IntegerField(primary_key=True, verbose_name='Nombre de Usuario')
+    idUser = models.AutoField(primary_key=True, verbose_name='Id de Usuario')
     name = models.CharField(max_length=25, verbose_name='Nombre de Usuario')
     aPaterno = models.CharField(max_length=25, verbose_name='Apellido Paterno')
     aMaterno = models.CharField(max_length=25, null=True, blank=True, verbose_name='Apellido Materno')
@@ -18,14 +18,14 @@ class Usuario(models.Model):
 #Modelo para obras
 
 class Obra(models.Model):
-    idObra = models.IntegerField(primary_key=True, verbose_name='Id de la Obra')
+    idObra = models.AutoField(primary_key=True, verbose_name='Id de la Obra')
     title = models.CharField(max_length=25, verbose_name='Título de Obra')
     price = models.IntegerField(verbose_name='Precio de Obra')
     style = models.CharField(max_length=25, verbose_name='Estilo de Obra')
     heigth = models.IntegerField(verbose_name='Alto de Obra')
     width = models.IntegerField(verbose_name='Ancho de Obra')
     year = models.IntegerField(verbose_name='Año de Obra')
-    image = models.ImageField(upload_to='images/gallery/')
+    image = models.ImageField(upload_to='gallery', null=True )
     autor = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     def __str__(self):
         return self.title

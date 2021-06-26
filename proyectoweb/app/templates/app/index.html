@@ -4,34 +4,6 @@
     {% load static %}
     <!-- Cart lateral menu -->
 
-    <div id="carroDeCompras" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100">
-        <header class="bs-canvas-header p-3 bg-danger overflow-auto">
-            <button type="button" class="bs-canvas-close float-left close" aria-label="Close"><span aria-hidden="true"
-                    class="text-light">&times;</span></button>
-            <h4 class="d-inline-block text-light mb-0 float-right">Carro de Compras</h4>
-        </header>
-        <div class="bs-canvas-content px-3 py-5">
-            <ul>
-                <li class="d-flex justify-content-around">
-                    <p>Cantidad</p>
-                    <p>Item</p>
-                    <p>Titulo</p>
-                    <p>Precio</p>
-                </li>
-                <li class="d-flex justify-content-around">
-                    <p>1</p>
-                    <div class="img-fluid">
-                        <img src="'src/images/gallery/4.png'" alt="" width="25px">
-                    </div>
-                    <p>Titulo</p>
-                    <p>$450</p>
-                </li>
-            </ul>
-
-        </div>
-    </div>
-    <!-- Cart lateral menu -->
-
     <!-- Carrousel -->
     <section>
         <div id="carrusel" class="carousel slide" data-ride="carousel">
@@ -115,7 +87,7 @@
         <div class="container-fluid d-flex justify-content-center py-3">
             <h2 class="display-4 titlesection">Galería</h2>
         </div>
-
+{% comment %} 
         <!-- Filtro -->
         <div class="container-fluid pb-5 px-0" id="filtroContainer">
             <div class="container pt-md-5 pt-0" id="filtros">
@@ -146,13 +118,34 @@
         </div>
 
 
-        <!-- Filtro -->
+        <!-- Filtro --> {% endcomment %}
 
         <div class="container py-4" id="cont-mostrador">
             <div class="row d-none justify-content-center p-5" id="mensaje">
                 <p class="text-center">No se ha encontrado la obra o el artista que busca</p>
             </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" id="mostrador">
+                {% for ob in obras %}
+                <div class="card mb-4 box-shadow" id="carta">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">{{ob.title}}</h4>
+                    </div>
+                    <div class="card-body gallery">
+                        <a class="popupimage" href="{{ob.image.url}}">
+                            <img class="card-img-top" src="{{ob.image.url}}">
+                        </a>
+                        <h1 class="precio">$<span id="valor">{{ob.price}}</span><small
+                                class="text-muted">/ <span id="divisa">USD</span></small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li id="autor">{{ob.autor}}</li>
+                            <li>Estilo: <span id="estilo">{{ob.style}}</span></li>
+                            <li>Medidas: {{ob.width}} cms / {{ob.heigth}} cms</li>
+                            <li>Año: {{ob.year}}</li>
+                        </ul>
+                        <button id="agregarCarrito" class="btn btn-lg btn-block btn-danger">Agregar al carrito <i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
         <!-- Modal -->

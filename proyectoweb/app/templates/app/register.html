@@ -11,7 +11,12 @@
                     </p>
                 </div>
                 <div class="card-body px-m-5 py-md-3">
-                    <form autocomplete="off" id="formularioReg" action="../index.html" method="post">
+                    <form autocomplete="off" id="formularioReg" action ="" method="post">
+                        {% csrf_token %}
+                        <div class='form-group'>
+                        {{ form.as_table }}
+                        </div>
+                        {% comment %} 
                         <p>
                             <label class="form-check-label" for="rNombre">Nombre*</label>
                             <input type="text" class="form-control" id="rNombre" name="rNombre" required>
@@ -45,10 +50,14 @@
                             <label class="form-check-label" for="rCorreo">Correo de Usuario*</label>
                             <input type="email" class="form-control" placeholder="pepito@correo.com" id="rCorreo"
                                 name="rCorreo" required>
-                        </p>
+                        </p> {% endcomment %}
                         <button type="submit" class="btn btn-lg btn-block btn-danger" id="form-btn" value="Enviar"><i
                                 class="fas fa-paper-plane"></i> Registrar Usuario</button>
+                                
                     </form>
+                    <div class="alert alert-success" role="alert">
+                        {{ mensaje }}
+                    </div>
                 </div>
             </div>
         </div>

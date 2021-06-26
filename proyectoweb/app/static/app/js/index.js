@@ -114,7 +114,6 @@ $(document).ready(function () {
 
 //Variables globales para la sección de api-dolar
 let divisaActual = 'USD';
-const galeria = document.querySelector("#mostrador");
 
 
 //Api convertir divisas -- USD //Esta función consume la api para conseguir el valor del dolar y 
@@ -176,7 +175,7 @@ function cambiarDivImpresa(divisaActual) {
 //Poblar la sección de galeria
 
 //constructor de objetos "obras"
-const obras = function (titulo, autor, imagen, precio, tecnica, medidas, annio) {
+/* const obras = function (titulo, autor, imagen, precio, tecnica, medidas, annio) {
     this.titulo = titulo,
         this.autor = autor,
         this.imagen = imagen,
@@ -184,9 +183,9 @@ const obras = function (titulo, autor, imagen, precio, tecnica, medidas, annio) 
         this.tecnica = tecnica,
         this.medidas = medidas,
         this.annio = annio
-}
+} */
 // contenido simulación de información de backend para propositos de prueba
-const obra1 = new obras("Caballero y Luna", "Manuel Fernández", "../images/gallery/1.png", "800", "Realismo", "180cms x 100cms", "2018");
+/* const obra1 = new obras("Caballero y Luna", "Manuel Fernández", "../images/gallery/1.png", "800", "Realismo", "180cms x 100cms", "2018");
 const obra2 = new obras("Ciervo Poligonal", "Andrea Ramírez", "../images/gallery/2.png", "785", "Impresionismo", "150cms x 95cms", "2020");
 const obra3 = new obras("Olas de Colores", "Romina García", "../images/gallery/3.png", "850", "Expresionismo", "200cms x 150cms", "2006");
 const obra4 = new obras("Mujer del Bosque", "Gabriel Villarán", "./images/gallery/4.png", "1250", "Surrealismo", "120cms x 75cms", "1998");
@@ -195,10 +194,10 @@ const obra6 = new obras("Ojos", "Romina García", "../images/gallery/6.png", "15
 const obra7 = new obras("Frutas", "Manuel Fernández", "../images/gallery/7.png", "1260", "Hiperrealismo", "120cms x 75cms", "1998");
 
 
-const obrasArray = [obra1, obra2, obra3, obra4, obra5, obra6, obra7];
+const obrasArray = [obra1, obra2, obra3, obra4, obra5, obra6, obra7]; */
 
 // Recorremos el array con objetos "obra" y lo imprimimos en la sección de galeria
-function printObras() {
+/* function printObras() {
     obrasArray.forEach(function (item) {
         galeria.innerHTML += `
                 <div class="card mb-4 box-shadow" id="carta">
@@ -222,11 +221,11 @@ function printObras() {
                 </div>`
 
     })
-}
+} */
 
 
 
-$(document).ready(function () {
+/* $(document).ready(function () {
     //Llamamos a la función de imprimir obras en galeria
     printObras();
 
@@ -280,7 +279,7 @@ $(document).ready(function () {
             }
         });
     })
-})
+}) */
 
 
 //Modal para las imagenes de la galería
