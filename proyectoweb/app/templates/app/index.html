@@ -1,213 +1,231 @@
 {% extends "app/base.html" %}
 
 {% block contenido %}
-    {% load static %}
-    <!-- Cart lateral menu -->
+{% load static %}
+<!-- Cart lateral menu -->
 
-    <!-- Carrousel -->
-    <section>
-        <div id="carrusel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carrusel" data-slide-to="0" class="active"></li>
-                <li data-target="#carrusel" data-slide-to="1"></li>
-                <li data-target="#carrusel" data-slide-to="2"></li>
-                <li data-target="#carrusel" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active" style="background-image: url({%static 'app/images/1crop.png'%})">
-                    <div class="carousel-caption d-block">
-                        <h5>Caballero y Luna</h5>
-                        <p>Autor: Manuel Fernández</p>
-                    </div>
+<!-- Carrousel -->
+<section>
+    <div id="carrusel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carrusel" data-slide-to="0" class="active"></li>
+            <li data-target="#carrusel" data-slide-to="1"></li>
+            <li data-target="#carrusel" data-slide-to="2"></li>
+            <li data-target="#carrusel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url({%static 'app/images/1crop.png'%})">
+                <div class="carousel-caption d-block">
+                    <h5>Caballero y Luna</h5>
+                    <p>Autor: Manuel Fernández</p>
                 </div>
-                <div class="carousel-item" style="background-image: url({%static 'app/images/2crop.png'%})">
-                    <div class="carousel-caption d-block">
-                        <h5>Ciervo Poligonal</h5>
-                        <p>Autor: Andrea Ramírez</p>
-                    </div>
+            </div>
+            <div class="carousel-item" style="background-image: url({%static 'app/images/2crop.png'%})">
+                <div class="carousel-caption d-block">
+                    <h5>Ciervo Poligonal</h5>
+                    <p>Autor: Andrea Ramírez</p>
                 </div>
-                <div class="carousel-item" style="background-image: url({%static 'app/images/3crop.png'%})">
-                    <div class="carousel-caption d-block">
-                        <h5>Olas de Colores</h5>
-                        <p>Autor: Romina García</p>
-                    </div>
+            </div>
+            <div class="carousel-item" style="background-image: url({%static 'app/images/3crop.png'%})">
+                <div class="carousel-caption d-block">
+                    <h5>Olas de Colores</h5>
+                    <p>Autor: Romina García</p>
                 </div>
-                <div class="carousel-item" style="background-image: url({%static 'app/images/4crop.png'%})">
-                    <div class="carousel-caption d-block">
-                        <h5>Mujer del Bosque</h5>
-                        <p>Autor: Gabriel Villarán</p>
+            </div>
+            <div class="carousel-item" style="background-image: url({%static 'app/images/4crop.png'%})">
+                <div class="carousel-caption d-block">
+                    <h5>Mujer del Bosque</h5>
+                    <p>Autor: Gabriel Villarán</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carrusel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<!-- Carrousel -->
+
+<!-- About Us -->
+<section id="nosotros" class="container-fluid mb-5 smooth-scroll bg-light">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col col-md-6 col-12">
+                <div class="container">
+                    <div class="mb-5">
+                        <h1 class="display-4 titlesection">Nosotros</h1>
+                    </div>
+                    <div>
+                        <p class="lead text-justify mb-5 mb-md-0">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio laborum explicabo maiores
+                            deleniti a architecto autem earum voluptas pariatur esse consectetur, voluptatum
+                            excepturi
+                            odio! Aut alias obcaecati praesentium architecto quasi.
+                        </p>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carrusel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="col col-md-6 col-12">
+                <div class="container-fluid">
+                    <img src="{% static 'app/images/group.jpg'%}" alt="us" class="img-fluid" width="100%" height="auto">
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- Carrousel -->
+    </div>
+</section>
+<!-- About Us -->
 
-    <!-- About Us -->
-    <section id="nosotros" class="container-fluid mb-5 smooth-scroll bg-light">
-        <div class="container py-5">
+
+<!-- Galería -->
+
+<section id="galeria" class="smooth-scroll">
+    <div class="container-fluid d-flex justify-content-center py-3">
+        <h2 class="display-4 titlesection">Galería</h2>
+    </div>
+    {% comment %}
+    <!-- Filtro -->
+    <div class="container-fluid pb-5 px-0" id="filtroContainer">
+        <div class="container pt-md-5 pt-0" id="filtros">
+            <h5 class="text-left text-secondary p-3 m-0">Filtros</h5>
             <div class="row">
-                <div class="col col-md-6 col-12">
-                    <div class="container">
-                        <div class="mb-5">
-                            <h1 class="display-4 titlesection">Nosotros</h1>
-                        </div>
-                        <div>
-                            <p class="lead text-justify mb-5 mb-md-0">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio laborum explicabo maiores
-                                deleniti a architecto autem earum voluptas pariatur esse consectetur, voluptatum
-                                excepturi
-                                odio! Aut alias obcaecati praesentium architecto quasi.
-                            </p>
-                        </div>
-                    </div>
+                <div class="col col-12 col-md-4 mt-3 mt-md-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Nombre de Artista"
+                        aria-label="Search" id="filtroArtista">
                 </div>
-                <div class="col col-md-6 col-12">
-                    <div class="container-fluid">
-                        <img src="{% static 'app/images/group.jpg'%}" alt="us" class="img-fluid" width="100%" height="auto">
-                    </div>
+                <div class="col col-12 col-md-4 mt-3 mt-md-0">
+                    <select class="custom-select" id="filtroEstilo">
+                        <option>Escoja Estilo</option>
+                        <option>Realismo</option>
+                        <option>Hiperrealismo</option>
+                        <option>Surrealismo</option>
+                        <option>Impresionismo</option>
+                        <option>Expresionismo</option>
+                        <option>Arte abstracto</option>
+                        <option>Arte Pop</option>
+                    </select>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Us -->
-
-
-    <!-- Galería -->
-
-    <section id="galeria" class="smooth-scroll">
-        <div class="container-fluid d-flex justify-content-center py-3">
-            <h2 class="display-4 titlesection">Galería</h2>
-        </div>
-{% comment %} 
-        <!-- Filtro -->
-        <div class="container-fluid pb-5 px-0" id="filtroContainer">
-            <div class="container pt-md-5 pt-0" id="filtros">
-                <h5 class="text-left text-secondary p-3 m-0">Filtros</h5>
-                <div class="row">
-                    <div class="col col-12 col-md-4 mt-3 mt-md-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Nombre de Artista"
-                            aria-label="Search" id="filtroArtista">
-                    </div>
-                    <div class="col col-12 col-md-4 mt-3 mt-md-0">
-                        <select class="custom-select" id="filtroEstilo">
-                            <option>Escoja Estilo</option>
-                            <option>Realismo</option>
-                            <option>Hiperrealismo</option>
-                            <option>Surrealismo</option>
-                            <option>Impresionismo</option>
-                            <option>Expresionismo</option>
-                            <option>Arte abstracto</option>
-                            <option>Arte Pop</option>
-                        </select>
-                    </div>
-                    <div class="col col-12 col-md-4 mt-3 mt-md-0">
-                        <button class="btn btn-lg btn-block btn-danger py-1" type="submit" id="btnBuscador"><i
-                                class="fas fa-search"></i> Buscar</button>
-                    </div>
+                <div class="col col-12 col-md-4 mt-3 mt-md-0">
+                    <button class="btn btn-lg btn-block btn-danger py-1" type="submit" id="btnBuscador"><i
+                            class="fas fa-search"></i> Buscar</button>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Filtro -->
+    {% endcomment %}
 
-
-        <!-- Filtro --> {% endcomment %}
-
-        <div class="container py-4" id="cont-mostrador">
-            <div class="row d-none justify-content-center p-5" id="mensaje">
-                <p class="text-center">No se ha encontrado la obra o el artista que busca</p>
+    <div class="container py-5 px-0" id="filtroContainer">
+        <div class="row justify-content-center">
+            <div class="col col-md-6">
+                <a class="btn btn-lg btn-block btn-danger py-1" type="submit" id="btnBuscador" href="subir-obra/"><i
+                        class="fas fa-plus py-3"></i> Agregar Obra</a>
             </div>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" id="mostrador">
-                {% for ob in obras %}
+        </div>
+    </div>
+
+    <div class="container py-4" id="cont-mostrador">
+        <div class="row d-none justify-content-center p-5" id="mensaje">
+            <p class="text-center">No se ha encontrado la obra o el artista que busca</p>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3" id="mostrador">
+            {% for ob in obras %}
                 <div class="card mb-4 box-shadow" id="carta">
                     <div class="card-header">
                         <h4 class="my-0 font-weight-normal">{{ob.title}}</h4>
                     </div>
                     <div class="card-body gallery">
+
                         <a class="popupimage" href="{{ob.image.url}}">
                             <img class="card-img-top" src="{{ob.image.url}}">
                         </a>
-                        <h1 class="precio">$<span id="valor">{{ob.price}}</span><small
-                                class="text-muted">/ <span id="divisa">USD</span></small></h1>
+                        <h1 class="precio">$<span id="valor">{{ob.price}}</span><small class="text-muted">/ <span
+                                    id="divisa">USD</span></small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li id="autor">{{ob.autor}}</li>
                             <li>Estilo: <span id="estilo">{{ob.style}}</span></li>
                             <li>Medidas: {{ob.width}} cms / {{ob.heigth}} cms</li>
                             <li>Año: {{ob.year}}</li>
                         </ul>
-                        <button id="agregarCarrito" class="btn btn-lg btn-block btn-danger">Agregar al carrito <i class="fas fa-cart-plus"></i></button>
+                        <div class="row row-cols-1 row-cols-lg-2">
+                            <div class="col mb-3 mb-lg-0">
+                                <a href="{% url 'form_mod_obra' ob.title %}" id="agregarCarrito"
+                                    class="btn btn-lg btn-block btn-success">Modificar <i class="fas fa-edit"></i></a>
+                            </div>
+                            <div class="col">
+                                <a href="{% url 'form_del_obra' ob.title %}" id="agregarCarrito"
+                                        class="btn btn-lg btn-block btn-danger">Eliminar <i class="fas fa-trash-alt"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <img src="" class="img-responsive" style="width:100%">
             </div>
         </div>
-        <!-- Modal -->
-        <div class="modal fade">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <img src="" class="img-responsive" style="width:100%">
+    </div>
+</section>
+<!-- Galería -->
+
+
+<!-- Contacto -->
+<section id="contacto" class="container-fluid smooth-scroll">
+    <div class="row justify-content-md-center py-5">
+        <div class="col col-md-6 col-12">
+            <div class="card p-3">
+                <div class="card-body text-center">
+                    <h4 class=" display-4 card-title">Contacto</h4>
+                    <p class="card-text">En caso de que necesites más información sobre una obra escríbenos.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Galería -->
-
-
-    <!-- Contacto -->
-    <section id="contacto" class="container-fluid smooth-scroll">
-        <div class="row justify-content-md-center py-5">
-            <div class="col col-md-6 col-12">
-                <div class="card p-3">
-                    <div class="card-body text-center">
-                        <h4 class=" display-4 card-title">Contacto</h4>
-                        <p class="card-text">En caso de que necesites más información sobre una obra escríbenos.
+                <div class="card-body">
+                    <form autocomplete="off" id="formulario" action="#" method="post">
+                        <p>
+                            <label class="form-check-label" for="cNombres"><i class="far fa-user-circle"></i>
+                                Nombres*</label>
+                            <input type="text" class="form-control" id="cNombres" name="cNombres" required>
                         </p>
-                    </div>
-                    <div class="card-body">
-                        <form autocomplete="off" id="formulario" action="#" method="post">
-                            <p>
-                                <label class="form-check-label" for="cNombres"><i class="far fa-user-circle"></i>
-                                    Nombres*</label>
-                                <input type="text" class="form-control" id="cNombres" name="cNombres" required>
-                            </p>
-                            <p>
-                                <label class="form-check-label" for="cApellidos"><i class="far fa-address-card"></i>
-                                    Apellidos*</label>
-                                <input type="text" class="form-control" id="cApellidos" name="cApellidos" required>
-                            </p>
-                            <p>
-                                <label class="form-check-label" for="cTelefono"><i class="fas fa-phone"></i> Teléfono
-                                    (Opcional)</label>
-                                <input type="text" class="form-control" placeholder="+56 123456773" id="cTelefono"
-                                    name="cTelefono">
-                            </p>
-                            <p>
-                                <label class="form-check-label" for="cCorreo"><i class="far fa-envelope"></i> Correo
-                                    Electrónico*</label>
-                                <input type="email" class="form-control" placeholder="pepito@correo.com" id="cCorreo"
-                                    name="cCorreo" required>
-                            </p>
-                            <p>
-                                <label for="exampleFormControlTextarea1"><i class="far fa-sticky-note"></i> Escriba su
-                                    Mensaje*</label>
-                                <textarea class="form-control" id="cMensaje" name="cMensaje" rows="3" minlength="15"
-                                    required></textarea>
-                            </p>
-                            <button type="submit" class="btn btn-lg btn-block btn-danger" id="form-btn" value="Enviar"><i
-                                    class="fas fa-paper-plane"></i> Enviar</button>
-                        </form>
-                    </div>
+                        <p>
+                            <label class="form-check-label" for="cApellidos"><i class="far fa-address-card"></i>
+                                Apellidos*</label>
+                            <input type="text" class="form-control" id="cApellidos" name="cApellidos" required>
+                        </p>
+                        <p>
+                            <label class="form-check-label" for="cTelefono"><i class="fas fa-phone"></i> Teléfono
+                                (Opcional)</label>
+                            <input type="text" class="form-control" placeholder="+56 123456773" id="cTelefono"
+                                name="cTelefono">
+                        </p>
+                        <p>
+                            <label class="form-check-label" for="cCorreo"><i class="far fa-envelope"></i> Correo
+                                Electrónico*</label>
+                            <input type="email" class="form-control" placeholder="pepito@correo.com" id="cCorreo"
+                                name="cCorreo" required>
+                        </p>
+                        <p>
+                            <label for="exampleFormControlTextarea1"><i class="far fa-sticky-note"></i> Escriba su
+                                Mensaje*</label>
+                            <textarea class="form-control" id="cMensaje" name="cMensaje" rows="3" minlength="15"
+                                required></textarea>
+                        </p>
+                        <button type="submit" class="btn btn-lg btn-block btn-danger" id="form-btn" value="Enviar"><i
+                                class="fas fa-paper-plane"></i> Enviar</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Contacto -->
+    </div>
+</section>
+<!-- Contacto -->
 
 {% endblock %}

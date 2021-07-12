@@ -186,22 +186,10 @@ a {
     transition: all 500ms ease-in-out;
 }
 
-.popupimage:hover { 
+.popupimage:hover{ 
     display: block;
     transform: scale(1.01);
     filter: grayscale(75%); 
-}
-
-.popupimage:hover + .hide{
-    display: block;
-}
-
-.fa-search-plus{
-    font-size: 1rem;
-}
-
-.popupimage.fa-search-plus:hover{
-    transform: scale(1.01);
 }
 
 .precio {
@@ -259,22 +247,14 @@ footer {
 }
 
 
+/* Formularios */
+
 #formContainer {
     max-width: 600px;
 }
 
-/* Registro */
-
-#seccionRegistro {
-    background-image: url("../images/gallery/5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Login */
-
-#seccionLogin{
-    background-image: url("../images/gallery/6.png");
+#formSection{
+    background-image: url("/../media/gallery/6.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -312,4 +292,9 @@ footer {
     -webkit-transition: all .4s ease-out;
     -moz-transition: all .4s ease-out;
     -ms-transition: all .4s ease-out;
+ }
+
+/* Form obra */
+ #form-obra{
+    padding: 3rem 5rem;
  }

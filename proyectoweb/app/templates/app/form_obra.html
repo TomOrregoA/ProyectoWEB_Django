@@ -1,0 +1,24 @@
+{% extends "app/base.html" %}
+
+{% block contenido %}
+    <section id="formSection" class="container-fluid smooth-scroll">
+        <div class="container px-0 p-md-5 py-5" id="formContainer">
+            <div class="card py-4 p-md-5">
+                <div class="card-body text-center">
+                    <h4 class=" display-4 card-title">Registrar una obra</h4>
+                    <p class="card-text">Complete el siguiente formulario para registrar una obra
+                    </p>
+                </div>
+                <form method="post" action="" id="formulario" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.as_p }}
+                    </div>
+                    <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+                    <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                    <div class="alert alert-success" id="error" role="alarm"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
